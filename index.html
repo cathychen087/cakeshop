@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cake</title>
+        <link href="./css/reset.css" type="text/css" rel="stylesheet"/>
+        <link href="./css/index.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="top">
+            <div class="header">
+                <div class="left">Free Delivery&Free Returns</div>
+                <img src="./img/logo2.jpg">
+                <div class="right">
+                    <ul>
+                        <li id="showPhone">1224517891</li>
+                        <li>|</li>
+                        <li id="showEmail">cake@outlook.com</li>
+                        <li>|</li>
+                        <li id="showName">Amelia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="topBar">
+                <ul class="barItems">
+                    <li class="barItem barActive" onclick="changeBar(0)">Home</li>
+                    <li class="barItem" onclick="changeBar(1)">Product List</li>
+                    <li class="barItem" onclick="changeBar(2)">Login</li>
+                </ul>
+                <ul class="icons">
+                    <li><img src="./img/search.png"></li>
+                    <li><img src="./img/love.png" class="love"></li>
+                    <li><img src="./img/message.png"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="page home pageActive">
+            <div class="banner">
+                <ul class="imgUl">
+                    <li class="imgLi"><img src="./img/banner1.jpg" id="img1" class="img"></li>
+                    <li class="imgLi"><img src="./img/banner2.jpg" id="img2" class="img"></li>
+                    <li class="imgLi"><img src="./img/banner3.jpg" id="img3" class="img"></li>
+                </ul>
+            </div>
+            <div class="imgs">
+                <ul>
+                    <li>
+                        <img src="./img/cake.jpg">
+                        <div>
+                            <strong>Cake</strong>
+                            <span>-- (30)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/dessert.jpg">
+                        <div>
+                            <strong>Dessert</strong>
+                            <span>-- (32)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/pastry.jpg">
+                        <div>
+                            <strong>Pastry</strong>
+                            <span>-- (29)</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page">
+            <div class="productList">
+                <div class="filter">
+                    <div class="number">
+                        <span class="numNow">16</span>
+                        <span class="word"><span class="noneable">Product Found</span> of</span>
+                        <span class="numAll">16</span>
+                    </div>
+                    <div class="slid">
+                        <span>min:</span>
+                        <input type="range" min="0" value="0" oninput="changeMin()" step="1" class="minInput" onchange="changeList()">
+                        <span class="minValue">€0</span>
+                    </div>
+                    <div class="slid">
+                        <span>max:</span>
+                        <input type="range" max="100" value="100"  oninput="changeMax()" step="1" class="maxInput" onchange="changeList()">
+                        <span class="maxValue">€100</span>
+                    </div>
+                </div>
+                <div class="cardList">
+                    <div class="card">
+                        <img src="./img/pic1.png">
+                        <div>
+                            <span>cake</span>
+                            <strong>€1.00</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="login">
+                <img src="./img/logo.jpg">
+                <div>
+                    <strong>Welcome</strong>
+                    <span>Please Login</span>
+                </div>
+                <form>
+                    <input placeholder="Please input your email" id="email">
+                    <input placeholder="Please input your phone" id="phone">
+                    <input placeholder="Please input your name" id="name">
+                    <div>
+                        <button style="background-color: #4e638b;" onclick="return false">register</button>
+                        <button onclick="return login()">login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="./javascript/index.js"></script>
+    </body>
+</html>

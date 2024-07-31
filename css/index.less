@@ -1,0 +1,364 @@
+.top{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+.header{
+    padding: 0 5%;
+    background-color: #233b69;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(219, 201, 201);
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    width: 90%;
+    color: white;
+    img{
+        width: 10vw;
+        position: absolute;
+        top: 30px;
+        border-radius: 0 0 80px 6px;
+        z-index: 5;
+    }
+    ul{
+        display: flex;
+        li{
+            margin: 0 10px;
+        }
+    }
+}
+.topBar{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 15%;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 10px;
+    .barItems{
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        .barItem{
+            margin: 0 20px;
+            padding: 20px 0;
+            width: 13ch;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s;
+            border-bottom: 3px solid white;
+            &.barActive{
+                border-bottom: 3px solid #233b69;
+            }
+        }
+    }
+    .icons{
+        display: flex;
+        li{
+            margin: 0 10px;
+            img{
+                width: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@imgWidth:48vw;
+#img2{
+    left: unit(@imgWidth,vw);
+}
+#img3{
+    left: (unit(@imgWidth,vw)/2);
+    scale: 1.1;
+    z-index: 2;
+}
+.banner{
+    width: 96vw;
+    margin: 40px auto;
+    position: relative;
+    ul{
+        li{
+            position: absolute;
+            img{
+                width: unit(@imgWidth,vw);
+                position: absolute;
+				border-radius: 5px;
+				transition-property: all;
+				transition-duration: 0.3s;
+            }
+        }
+    }
+}
+.imgs{
+    width: 96vw;
+    margin: 0 auto;
+    ul{
+        display: flex;
+        justify-content: space-around;
+        li{
+            transition: all 0.3s;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+                border-radius: 10px;
+            }
+            img{
+                width: 25vw;
+                transition: all 0.3s;
+                border-radius: 3px;
+                &:hover{
+                    border-radius: 10px;
+                }
+            }
+            div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0;
+                strong{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+.page{
+    display: none;
+    margin-top: 120px;
+}
+.home{
+    margin-top: 140px;
+}
+.page.pageActive{
+    display: block;
+}
+.productList{
+    width: 67vw;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    .filter{
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .number{
+            border: 1px solid gray;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            .numNow{
+                width: 3ch;
+                color: red;
+            }
+            .numAll{
+                width: 3ch;
+                color: red;
+            }
+        }
+        .slid{
+            display: flex;
+            align-items: center;
+            input{ 
+                outline: none; 
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+                height: 30px;
+                background: none;
+                overflow: hidden;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+            input[type="range"]::-webkit-slider-thumb {
+                -moz-appearance: none;
+                appearance: none; 
+                -webkit-box-shadow:0 0 2px ;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #f44336;
+                border: 1px solid transparent;
+                margin-top: -6px;
+                border-image: linear-gradient(#f44336,#f44336) 0 fill / 8 20 8 0 / 0 0 0 99vw; 
+            }
+            [type="range"]::-webkit-slider-runnable-track {
+                height: 4px;
+                background: rgba(0, 0, 0, 0.2);
+            }
+            .minValue{
+                width: 4ch;
+            }
+            .maxValue{
+                width: 4ch;
+            }
+        }
+
+    }
+    .cardList{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card{
+            padding: 10px;
+            width: 150px;
+            border: 1px solid rgb(228, 228, 228);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: -2px 10px 10px 2px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+            img{
+                width: 150px;
+                border-radius: 3px;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+.login{
+    width: 30vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    img{
+        border-radius: 50%;
+        width: 100px;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 50px 0;
+        strong{
+            font-size: 36px;
+            font-weight: bold;
+            color: gray;
+        }
+        span{
+            font-size: 20px;
+            color: gray;
+        }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        input{
+            width: 300px;
+            height: 60px;
+            border: 1px solid rgb(171, 171, 171);
+            font-size: 20px;
+            border-radius: 10px;
+            padding-left: 20px;
+            margin: 15px 0;
+            transition: all 0.1s;
+            box-sizing: border-box;
+            &:focus{
+                border: 2px solid #233b69;
+            }
+        }
+        button{
+            width: 100px;
+            background-color: #233b69;
+            height: 45px;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+@media screen and  (max-width:769px){
+    .header{
+        padding: 0 1%;
+        width: 100%;
+        .right{
+            ul{
+                li{
+                    display: none;
+                    &:last-child{
+                        display: block;
+                    }
+                }
+            }
+        }
+        img{
+            width: 13vw;
+            left: 0;
+        }
+    }
+    .topBar{
+        padding-left: 2%;
+        .barItems{
+            .barItem{
+                margin: 0;
+                font-size: 12px;
+                width: 15ch;
+            }
+        }
+        .icons{
+            li{
+                display: none;
+                &:first-child{
+                    display: block;
+                }
+            }
+        }
+    }
+    .productList{
+        margin: 0 auto;
+        width: 90%;
+        .filter{
+            margin: 10px 0;
+            .number{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                .noneable{
+                    display: none;
+                }
+            }
+            .slid{
+                margin: 0 3px;
+            }
+        }
+        .cardList{
+            .card{
+                margin: 5px;
+                padding: 5px;
+                width: 145px;
+                img{
+                    width: 145px;
+                }
+            }
+        }
+    }
+}
